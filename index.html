@@ -15,12 +15,10 @@
                         sans: ['Heebo', 'sans-serif'],
                     },
                     colors: {
-                        deepblue: '#081225',
-                        gold: '#d4af37',
-                        lightgold: '#f3e5ab',
-                        cardbg: 'rgba(255, 255, 255, 0.95)',
-                        'astra-gold': '#f0ab00',
-                        'astra-purple': '#6b21a8'
+                        obsidian: '#090d16',
+                        neoncyan: '#22d3ee',
+                        neonpurple: '#a855f7',
+                        cardbg: 'rgba(255, 255, 255, 0.95)'
                     }
                 }
             }
@@ -28,13 +26,13 @@
     </script>
     <style>
         body {
-            background-color: #050b14;
+            background-color: #090d16;
             color: white;
             overflow-x: hidden;
         }
         
-        .gold-text-gradient {
-            background: linear-gradient(to left, #f9f2d0, #d4af37, #b8860b);
+        .neon-text-gradient {
+            background: linear-gradient(to left, #22d3ee, #a855f7, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -48,27 +46,27 @@
             transform: translateY(-6px);
         }
 
-        /* Ambient glowing circles */
+        /* Ambient floating circles */
         @keyframes float-ambient-1 {
             0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(60px, 40px) scale(1.15); }
+            50% { transform: translate(50px, 30px) scale(1.15); }
         }
         @keyframes float-ambient-2 {
             0%, 100% { transform: translate(0, 0) scale(1.05); }
-            50% { transform: translate(-50px, -60px) scale(0.9); }
+            50% { transform: translate(-40px, -50px) scale(0.9); }
         }
         @keyframes float-ambient-3 {
             0%, 100% { transform: translate(0, 0) scale(0.95); }
-            50% { transform: translate(30px, -40px) scale(1.1); }
+            50% { transform: translate(30px, -30px) scale(1.1); }
         }
         .animate-ambient-1 {
-            animation: float-ambient-1 22s infinite ease-in-out;
+            animation: float-ambient-1 20s infinite ease-in-out;
         }
         .animate-ambient-2 {
-            animation: float-ambient-2 28s infinite ease-in-out;
+            animation: float-ambient-2 25s infinite ease-in-out;
         }
         .animate-ambient-3 {
-            animation: float-ambient-3 25s infinite ease-in-out;
+            animation: float-ambient-3 22s infinite ease-in-out;
         }
 
         /* Decorative background lines mimicking the invitation */
@@ -80,21 +78,21 @@
             height: 100%;
             pointer-events: none;
             z-index: -1;
-            opacity: 0.25;
+            opacity: 0.2;
             background-image: repeating-linear-gradient(
                 45deg,
                 transparent,
                 transparent 10px,
-                rgba(212, 175, 55, 0.02) 10px,
-                rgba(212, 175, 55, 0.02) 11px
+                rgba(34, 211, 238, 0.02) 10px,
+                rgba(34, 211, 238, 0.02) 11px
             );
         }
 
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.025);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.07);
         }
 
         .learning-card {
@@ -102,10 +100,10 @@
         }
 
         .learning-card:hover {
-            border-color: rgba(212, 175, 55, 0.3);
-            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(34, 211, 238, 0.3);
+            background: rgba(255, 255, 255, 0.06);
             transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
+            box-shadow: 0 10px 30px rgba(34, 211, 238, 0.05);
         }
     </style>
 </head>
@@ -114,40 +112,40 @@
 
     <!-- Ambient background glows -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-2]">
-        <div class="absolute w-[500px] h-[500px] rounded-full bg-gold/10 blur-[130px] top-[-10%] left-[-10%] animate-ambient-1"></div>
-        <div class="absolute w-[600px] h-[600px] rounded-full bg-astra-purple/10 blur-[150px] bottom-[-20%] right-[-10%] animate-ambient-2"></div>
+        <div class="absolute w-[500px] h-[500px] rounded-full bg-neoncyan/10 blur-[130px] top-[-10%] left-[-10%] animate-ambient-1"></div>
+        <div class="absolute w-[600px] h-[600px] rounded-full bg-neonpurple/10 blur-[150px] bottom-[-20%] right-[-10%] animate-ambient-2"></div>
         <div class="absolute w-[450px] h-[450px] rounded-full bg-indigo-500/5 blur-[120px] top-[30%] right-[15%] animate-ambient-3"></div>
     </div>
 
     <!-- Header Section -->
     <header class="pt-16 pb-8 px-4 text-center max-w-4xl mx-auto">
-        <div class="w-20 h-20 mx-auto mb-6 bg-gold/20 rounded-full flex items-center justify-center border border-gold/30 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-            <i class="fa-solid fa-graduation-cap text-3xl text-lightgold"></i>
+        <div class="w-20 h-20 mx-auto mb-6 bg-neoncyan/10 rounded-full flex items-center justify-center border border-neoncyan/30 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
+            <i class="fa-solid fa-graduation-cap text-3xl text-neoncyan"></i>
         </div>
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight">
-            למידה. <span class="gold-text-gradient">חדשנות.</span> מומחיות.
+            למידה. <span class="neon-text-gradient">חדשנות.</span> מומחיות.
         </h1>
         <h2 class="text-2xl md:text-3xl font-light mb-3 text-gray-200">
             AI ככלי אסטרטגי לקידום אחיות מומחיות
         </h2>
-        <p class="text-lg md:text-xl text-gold/90 font-medium mb-8">
+        <p class="text-lg md:text-xl text-neoncyan/95 font-medium mb-8">
             סדנה חדשנית וחווייתית לקידום המומחיות הקלינית והפיתוח המקצועי
         </p>
 
         <!-- Info Bar -->
         <div class="flex flex-wrap justify-center gap-6 text-sm md:text-base border-y border-white/10 py-4 mb-10 bg-white/5 backdrop-blur-sm rounded-2xl">
             <div class="flex items-center gap-2">
-                <i class="fa-regular fa-clock text-gold"></i>
+                <i class="fa-regular fa-clock text-neoncyan"></i>
                 <span>08:30–13:00</span>
             </div>
             <div class="hidden md:block w-px bg-white/20"></div>
             <div class="flex items-center gap-2">
-                <i class="fa-regular fa-calendar text-gold"></i>
+                <i class="fa-regular fa-calendar text-neoncyan"></i>
                 <span>24.6</span>
             </div>
             <div class="hidden md:block w-px bg-white/20"></div>
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-location-dot text-gold"></i>
+                <i class="fa-solid fa-location-dot text-neoncyan"></i>
                 <span>המרכז הרפואי שיבא</span>
             </div>
         </div>
@@ -157,33 +155,32 @@
         
         <!-- Prep Challenge Section -->
         <section class="mb-16">
-            <div class="glass-panel rounded-3xl p-6 md:p-8 border border-gold/30 shadow-[0_0_30px_rgba(212,175,55,0.15)] relative overflow-hidden group">
-                <div class="absolute inset-0 bg-gradient-to-r from-gold/5 to-transparent opacity-50"></div>
+            <div class="glass-panel rounded-3xl p-6 md:p-8 border border-neonpurple/30 shadow-[0_0_30px_rgba(168,85,247,0.15)] relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-r from-neonpurple/5 to-transparent opacity-50"></div>
                 
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="flex items-start gap-5 flex-1">
-                        <div class="w-14 h-14 shrink-0 rounded-2xl bg-gold/20 flex items-center justify-center border border-gold/40 text-gold text-2xl shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                            <i class="fa-solid fa-lightbulb"></i>
+                        <div class="w-14 h-14 shrink-0 rounded-2xl bg-neonpurple/20 flex items-center justify-center border border-neonpurple/40 text-neonpurple text-2xl shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                            <i class="fa-solid fa-video"></i>
                         </div>
                         <div class="w-full">
-                            <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">הכנה לקראת המפגש</span>
-                            <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">אתגר ה-Prompt האישי שלך</h3>
-                            <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                                לקראת הסדנה, המשתתפים מתבקשים להגיע לאחר שחשבו על השלמת המשפט הבא.
-                                רשמו והכינו את המחשבות שלכם - נשתמש בהן כבסיס לתרגול המעשי המשותף שלנו!
+                            <span class="text-xs font-bold text-neonpurple uppercase tracking-wider block mb-1">משימה קבוצתית קלה</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">אתגר סרטון האווטאר המשותף שלנו</h3>
+                            <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+                                לקראת הסדנה, אנו מזמינים אתכם לחשוב על השלמת המשפט הבא בצורה של טיפ קצר, תובנה או רעיון שחשוב לכם להעביר:
                             </p>
                             
-                            <!-- Prompt Input Box Mimic -->
-                            <div class="mt-5 bg-black/40 rounded-2xl p-4 border border-white/10 flex items-center justify-between gap-4 shadow-inner">
-                                <div class="flex items-center gap-3 overflow-hidden">
-                                    <span class="text-xs text-gold font-mono shrink-0 hidden sm:inline">PROMPT &gt;</span>
-                                    <span id="promptText" class="text-base md:text-lg font-bold text-lightgold italic">"קורס מומחיות בשיקום בשבילי הוא..."</span>
-                                </div>
-                                <button onclick="copyPrompt()" class="bg-white/10 hover:bg-gold hover:text-[#050b14] text-white py-2 px-4 rounded-xl transition-all duration-300 flex items-center gap-2 text-sm shrink-0 font-bold" title="העתק משפט">
-                                    <i id="copyIcon" class="fa-regular fa-copy"></i>
-                                    <span id="copyText" class="hidden sm:inline">העתק משפט</span>
-                                </button>
+                            <!-- Large Centered Highlight Sentence -->
+                            <div class="bg-black/50 rounded-2xl p-6 border border-white/10 text-center shadow-inner my-4">
+                                <span class="text-xl md:text-2xl font-extrabold text-neoncyan tracking-wide block">
+                                    "קורס מומחיות בשיקום בשבילי הוא..."
+                                </span>
                             </div>
+
+                            <p class="text-slate-300 text-sm md:text-base leading-relaxed mt-4">
+                                במהלך הסדנה נלמד להשתמש בטכנולוגיית AI כדי להפוך את המשפט שלכם ל**אווטאר דיגיטלי מדבר**. 
+                                בסיום המפגש, נחבר את כל הסרטונים האישיים של כולם לסרטון קבוצתי מדליק - שישמש כמזכרת מדהימה וכתוצר ייחודי מהסדנה!
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -193,11 +190,11 @@
         <!-- Learning & AI Section -->
         <section class="mb-16">
             <div class="glass-panel rounded-3xl p-8 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.3)] relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-l from-gold/5 to-transparent opacity-30"></div>
+                <div class="absolute inset-0 bg-gradient-to-l from-neoncyan/5 to-transparent opacity-30"></div>
                 
                 <div class="relative z-10">
                     <div class="text-center mb-8">
-                        <span class="text-xs uppercase tracking-widest text-gold font-bold">חדשנות בלמידה</span>
+                        <span class="text-xs uppercase tracking-widest text-neoncyan font-bold">חדשנות בלמידה</span>
                         <h3 class="text-2xl md:text-3xl font-bold mt-1 text-white">כיצד AI מקדם ומאיץ את הלמידה שלנו?</h3>
                         <p class="text-slate-400 text-sm md:text-base mt-2">
                             שילוב בינה מלאכותית בעבודה היומיומית יוצר קפיצת מדרגה משמעותית ביכולת שלנו לרכוש וליישם ידע
@@ -207,10 +204,10 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                         <!-- Speed of Knowledge -->
                         <div class="learning-card glass-panel p-6 rounded-2xl border border-white/5 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-full bg-neoncyan/10 flex items-center justify-center text-neoncyan text-xl mb-4">
                                 <i class="fa-solid fa-bolt"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-lightgold mb-2">צמצום פערי ידע ברגע</h4>
+                            <h4 class="text-lg font-bold text-neoncyan mb-2">צמצום פערי ידע ברגע</h4>
                             <p class="text-slate-300 text-sm leading-relaxed">
                                 סיכום וניתוח מהיר של מאמרים, מחקרים קליניים ונהלים מורכבים. הפיכת מאות עמודים למידע ממוקד ויישומי תוך שניות.
                             </p>
@@ -218,10 +215,10 @@
 
                         <!-- Personalized Learning -->
                         <div class="learning-card glass-panel p-6 rounded-2xl border border-white/5 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-full bg-neoncyan/10 flex items-center justify-center text-neoncyan text-xl mb-4">
                                 <i class="fa-solid fa-user-graduate"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-lightgold mb-2">למידה מותאמת אישית</h4>
+                            <h4 class="text-lg font-bold text-neoncyan mb-2">למידה מותאמת אישית</h4>
                             <p class="text-slate-300 text-sm leading-relaxed">
                                 יצירת חומרי תרגול מותאמים, שאלות הכנה וסימולציות. ה-AI מתפקד כמורה פרטי הסבלני ביותר לכל שאלה קלינית או מקצועית.
                             </p>
@@ -229,10 +226,10 @@
 
                         <!-- Decision Partner -->
                         <div class="learning-card glass-panel p-6 rounded-2xl border border-white/5 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-full bg-neoncyan/10 flex items-center justify-center text-neoncyan text-xl mb-4">
                                 <i class="fa-solid fa-comments"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-lightgold mb-2">שותף פעיל לחשיבה</h4>
+                            <h4 class="text-lg font-bold text-neoncyan mb-2">שותף פעיל לחשיבה</h4>
                             <p class="text-slate-300 text-sm leading-relaxed">
                                 סיעור מוחות לפתרון דילמות קליניות מורכבות, ניתוח תיאורי מקרה ובחינת חלופות טיפוליות מבוססות ראיות בשטח.
                             </p>
@@ -351,7 +348,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Video 1: Gemini, GPT, NotebookLM -->
-                <div class="bg-cardbg rounded-2xl p-5 flex flex-col h-full border border-transparent hover:border-gold transition-all duration-300">
+                <div class="bg-cardbg rounded-2xl p-5 flex flex-col h-full border border-transparent hover:border-neoncyan transition-all duration-300">
                     <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
                             <i class="fa-solid fa-key"></i>
@@ -370,7 +367,7 @@
                 </div>
 
                 <!-- Video 2: OpenEvidence -->
-                <div class="bg-cardbg rounded-2xl p-5 flex flex-col h-full border border-transparent hover:border-gold transition-all duration-300">
+                <div class="bg-cardbg rounded-2xl p-5 flex flex-col h-full border border-transparent hover:border-neoncyan transition-all duration-300">
                     <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-blue-600">
                             <i class="fa-solid fa-user-doctor"></i>
@@ -393,14 +390,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-auto border-t border-slate-800 bg-slate-900/50 backdrop-blur-md relative z-20 overflow-hidden">
+    <footer class="mt-auto border-t border-slate-800 bg-slate-950/70 backdrop-blur-md relative z-20 overflow-hidden">
         
         <!-- לוגו אבסולוטי - בפינה השמאלית התחתונה -->
         <div class="absolute bottom-6 left-4 md:bottom-8 md:left-8 z-30 group">
             <!-- הילה בהירה וזוהרת מאחורי הלוגו -->
-            <div class="absolute -inset-2 bg-gradient-to-r from-astra-gold/50 to-astra-purple/50 rounded-3xl blur-xl opacity-80 group-hover:opacity-100 transition duration-500"></div>
+            <div class="absolute -inset-2 bg-gradient-to-r from-neoncyan/50 to-neonpurple/50 rounded-3xl blur-xl opacity-80 group-hover:opacity-100 transition duration-500"></div>
             
-            <div class="relative w-16 h-16 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white flex items-center justify-center p-2 md:p-3 border border-white shadow-[0_0_30px_rgba(240,171,0,0.3)] transition-transform duration-500 group-hover:scale-105">
+            <div class="relative w-16 h-16 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white flex items-center justify-center p-2 md:p-3 border border-white shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-transform duration-500 group-hover:scale-105">
                 <img src="logo.png" alt="לוגו תפארת אליאב" class="w-full h-full object-contain">
             </div>
         </div>
@@ -411,8 +408,8 @@
             <div class="mb-10 w-full max-w-3xl glass-panel p-8 md:p-12 rounded-3xl flex flex-col items-center justify-center gap-8 hover:border-slate-600/50 transition-colors text-center">
                 
                 <!-- תמונה במרכז -->
-                <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-astra-gold/50 shadow-[0_0_30px_rgba(240,171,0,0.3)] z-10 group">
-                    <div class="absolute inset-0 bg-astra-purple/30 blur-2xl rounded-full -z-10"></div>
+                <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-neoncyan/30 shadow-[0_0_30px_rgba(34,211,238,0.2)] z-10 group">
+                    <div class="absolute inset-0 bg-neonpurple/30 blur-2xl rounded-full -z-10"></div>
                     <!-- אם התמונה לא נטענת, יוצג רקע חלופי -->
                     <div class="absolute inset-0 bg-slate-800 flex items-center justify-center -z-10"><i class="fa-solid fa-user text-5xl text-slate-500"></i></div>
                     <img src="tiferet.jpeg" alt="תפארת אליאב" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
@@ -423,7 +420,7 @@
                     <h4 class="text-slate-200 font-semibold mb-8 text-2xl tracking-wide">תישארו מעודכנים, בואו נשמור על קשר:</h4>
                     <div class="flex justify-center gap-4 flex-wrap">
                         <!-- Website -->
-                        <a href="https://tiferet-eliav.vercel.app" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-astra-gold p-3 md:p-4 rounded-full text-slate-400 hover:text-white transition-all hover:scale-110 shadow-lg" title="אתר" aria-label="Website">
+                        <a href="https://tiferet-eliav.vercel.app" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-neoncyan p-3 md:p-4 rounded-full text-slate-400 hover:text-white transition-all hover:scale-110 shadow-lg" title="אתר" aria-label="Website">
                             <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
                         </a>
                         <!-- Facebook -->
@@ -465,28 +462,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Script for copy prompt functionality -->
-    <script>
-        function copyPrompt() {
-            const promptText = 'קורס מומחיות בשיקום בשבילי הוא...';
-            navigator.clipboard.writeText(promptText).then(() => {
-                const copyText = document.getElementById('copyText');
-                const copyIcon = document.getElementById('copyIcon');
-                
-                if (copyText) copyText.innerText = 'הועתק!';
-                if (copyIcon) {
-                    copyIcon.className = 'fa-solid fa-check text-green-400';
-                }
-                
-                setTimeout(() => {
-                    if (copyText) copyText.innerText = 'העתק משפט';
-                    if (copyIcon) copyIcon.className = 'fa-regular fa-copy';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
-        }
-    </script>
 </body>
 </html>
